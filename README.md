@@ -37,7 +37,7 @@ m =
     11    18    25     2     9
     
     
-    ##  With GNU Octave
+##  With GNU Octave
     
     It is also possible to run your code via GNU Octave. For this aim
     
@@ -89,7 +89,7 @@ magigsquare.m is the default example which is given by Mathworks. Hence we have 
   ``` 
   
      
-    ##  With GNU Octave
+ ##  With GNU Octave
     
     It is also possible to run your code via GNU Octave. For this aim
     
