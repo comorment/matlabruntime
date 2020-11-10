@@ -1,6 +1,6 @@
 Running your matlab project via Singularity Containers
 
-To run your matlab code with this container there are 2 alternatives: 1) Build it the standalone application of your code via Matlab Compiler and  run it with Matlab Runtime 2) Run it with GNU octave (https://www.gnu.org/software/octave/index)
+To run your matlab code with this container there are 2 alternatives: 1) Build the standalone application of your code via Matlab Compiler and  run it with Matlab Runtime 2) Run it with GNU octave (https://www.gnu.org/software/octave/index)
 
 ## Getting Started
 
