@@ -79,10 +79,10 @@ FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
 
 * Run ``singularity shell --no-home -B $(pwd):/data octave-matlab.sif `` to use singularity in an interactive mode. In this mode you can interactively run MATLAB commands via GNU OCTAVE (as explained above). Note that it will consume resources of the machine where  you currently run the singulairty  command (i.e., most likely, the login node of your HPC cluster).
 
-* Run singularity container within SLURM job scheduler, by creating a ``hello_slurm.sh`` file (by adjusting the example below), and running ``sbatch hello_slurm.sh``:
+* Run singularity container within SLURM job scheduler, by creating a ``octave-matlab_slurm.sh`` file (by adjusting the example below), and running ``sbatch octave-matlab_slurm.sh``:
   ```
   #!/bin/bash
-  #SBATCH --job-name=hello
+  #SBATCH --job-name=octave-matlab
   #SBATCH --account=p697
   #SBATCH --time=00:10:00
   #SBATCH --cpus-per-task=1
