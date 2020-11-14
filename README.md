@@ -11,25 +11,12 @@ To run your matlab code with this container there are 2 alternatives: 1) Build t
 
 ##  With Matlab Runtime
 
+This can be done in two step:
+
 1. Get the standalone application of your code via Matlab Compiler (https://ch.mathworks.com/help/compiler/create-and-install-a-standalone-application-from-matlab-code.html) (which is ``magicsquare.tar.gz``  )
 
-2. Mount the directory where your standalone application folder  to the container and run the application
- 
- ```
-singularity exec        -B  /the_path_of_the_application/your_application_name/for_redistribution_files_only:/execute         octave-matlab         /execute/your_application <possible commands>
-
-```
-
-For example
-
-```
-singusingularity exec      -B magicsquare/for_redistribution_files_only:/execute         octave-matlab.sif         /execute/magicsquare 5
-
-```
-
-
-magigsquare.m is the default example which is given by Mathworks. We have also build and included it inside to container.  You can also run it without mounting any directory  as 
- 
+2. Run the standalone application via Matlab Runtime. For example
+magigsquare.m is the default example which is given by Mathworks. We have  built and added it inside to container.  You can this application within container as;
  
   ```
  singularity exec --no-home octave-matlab.sif /magicsquare/for_redistribution_files_only/magicsquare 5
@@ -73,7 +60,6 @@ This is free software; see the source code for copying conditions.
 There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
 FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
    ```
-* Run ``singusingularity exec  -B magicsquare/for_redistribution_files_only:/execute         octave-matlab.sif         /execute/magicsquare 5`` command, which will mount current folder (the ``$(pwd)``) as ``/execute`` inside the container. It will then run the standalone Matlab application.
 
 * Run   ``singularity exec --no-home octave-matlab.sif /magicsquare/for_redistribution_files_only/magicsquare 5 `` to run the Matlab application already placed inside the container.
 
