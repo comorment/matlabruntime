@@ -4,16 +4,16 @@ To run your matlab code with this container there are 2 alternatives: 1) Build t
 
 ## Getting Started
 
-* Download ``octave-matlab.sif`` and ``magicsquare.tar.gz`` files placed in octave-matlab_v1.0 folder from [here](https://drive.google.com/drive/folders/1mfxZJ-7A-4lDlCkarUCxEf2hBIxQGO69?usp=sharing)
-* Import both files to your secure HPC environment (i.e. TSD, Bianca, Computerome, or similar).
-* Run ``tar -xzvf magicsquare.tar.gz`` to extract demo data.
+* Download ``octave-matlab.sif``  placed in octave-matlab_v1.0 folder from [here](https://drive.google.com/drive/folders/1mfxZJ-7A-4lDlCkarUCxEf2hBIxQGO69?usp=sharing)
+* Import ``octave-matlab.sif``  to your secure HPC environment (i.e. TSD, Bianca, Computerome, or similar).
+* The main aim is running magicsquare.m file within container. For this aim two different alternatives have been proposed:
 
 
 ##  With Matlab Runtime
 
 This can be done in two step:
 
-1. Get the standalone application of your code via Matlab Compiler (https://ch.mathworks.com/help/compiler/create-and-install-a-standalone-application-from-matlab-code.html) (which is ``magicsquare.tar.gz``  )
+1. Get the standalone application of your code via Matlab Compiler. (https://ch.mathworks.com/help/compiler/create-and-install-a-standalone-application-from-matlab-code.html)  This has been already done for you and added into container (/magicsquare/for_redistribution_files_only/magicsquare)
 
 2. Run the standalone application via Matlab Runtime. For example
 magigsquare.m is the default example which is given by Mathworks. We have  built and added it inside to container.  You can this application within container as;
