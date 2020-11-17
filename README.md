@@ -22,6 +22,10 @@ magigsquare.m is the default example which is given by Mathworks. We have  built
  singularity exec --no-home octave-matlab.sif /magicsquare/for_redistribution_files_only/magicsquare 5
   ``` 
   
+  ```
+  singularity exec  --bind  magicsquare/for_redistribution_files_only:/execute         octave-matlab.sif         /execute/magicsquare 5
+
+ ```
      
  ##  With GNU Octave
     
@@ -33,7 +37,7 @@ magigsquare.m is the default example which is given by Mathworks. We have  built
     sudo singularity shell --no-home octave-matlab.sif
 ```
 
-2- Type octave and add the path where your code is. For instance, in our case the code (magicsquare.m)  is placed to  /magicsquare/for_redistribution_files_only . Hence all you need to do is adding this directory to octave as
+2- Type ``octave`` and add the path where your code is. For instance, in our case the code (magicsquare.m)  is placed to  /magicsquare/for_redistribution_files_only . Hence all you need to do is adding this directory to octave as
 
  ```
  addpath('/magicsquare/for_redistribution_files_only')  
