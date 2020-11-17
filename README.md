@@ -4,8 +4,12 @@ To run your matlab code with this container there are 2 alternatives: 1) Build t
 
 ## Getting Started
 
-* Download ``octave-matlab.sif``  placed in octave-matlab_v1.0 folder from [here](https://drive.google.com/drive/folders/1mfxZJ-7A-4lDlCkarUCxEf2hBIxQGO69?usp=sharing)
-* Import ``octave-matlab.sif``  to your secure HPC environment (i.e. TSD, Bianca, Computerome, or similar).
+* Download ``octave-matlab.sif``  and `` magifsquare.zip ``  files placed in octave-matlab_v1.0 folder from [here](https://drive.google.com/drive/folders/1mfxZJ-7A-4lDlCkarUCxEf2hBIxQGO69?usp=sharing)
+* Import these files  to your secure HPC environment (i.e. TSD, Bianca, Computerome, or similar).
+* Extract the files via ``unzip magifsquare.zip `` 
+* It may be required to change permission ``chmod 777 magicsquare/for_redistribution_files_only/magicsquare ``
+
+
 * The main aim is running magicsquare.m file within container. For this aim two different alternatives have been proposed:
 
 
@@ -13,10 +17,9 @@ To run your matlab code with this container there are 2 alternatives: 1) Build t
 
 This can be done in two step:
 
-1. Get the standalone application of your code via Matlab Compiler. (https://ch.mathworks.com/help/compiler/create-and-install-a-standalone-application-from-matlab-code.html)  This has been already done for you and added into container (/magicsquare/for_redistribution_files_only/magicsquare)
+1. Get the standalone application of your code via Matlab Compiler. (https://ch.mathworks.com/help/compiler/create-and-install-a-standalone-application-from-matlab-code.html)  This has been already done for you and added into container (/magicsquare/for_redistribution_files_only/magicsquare) and also given via `` magifsquare.zip `` 
 
-2. Run the standalone application via Matlab Runtime. For example
-magigsquare.m is the default example which is given by Mathworks. We have  built and added it inside to container.  You can this application within container as;
+2. Run the standalone application via Matlab Runtime.  You can this application within container as;
  
   ```
  singularity exec --no-home octave-matlab.sif /magicsquare/for_redistribution_files_only/magicsquare 5
