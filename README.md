@@ -6,7 +6,7 @@ To run your matlab code with this container there are 2 alternatives: 1) Build t
 
 * Download ``octave-matlab.sif``  and `` magifsquare.zip ``  files placed in octave-matlab_v1.0 folder from [here](https://drive.google.com/drive/folders/1mfxZJ-7A-4lDlCkarUCxEf2hBIxQGO69?usp=sharing)
 * Import these files  to your secure HPC environment (i.e. TSD, Bianca, Computerome, or similar).
-* Extract the files via ``unzip magifsquare.zip `` 
+* Extract the application file via ``unzip magifsquare.zip `` 
 * It may be required to change permission ``chmod 777 magicsquare/for_redistribution_files_only/magicsquare ``
 
 
@@ -37,7 +37,7 @@ This can be done in two step:
  1. Run the container in shell mode
     
  ```
-    sudo singularity shell --no-home octave-matlab.sif
+    singularity shell --no-home octave-matlab.sif
 ```
 
 2- Type ``octave`` and add the path where your code is. For instance, in our case the code (magicsquare.m)  is placed to  /magicsquare/for_redistribution_files_only . Hence all you need to do is adding this directory to octave as
