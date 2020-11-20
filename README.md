@@ -27,7 +27,7 @@ An example application called magicsquare provided via `` magifsquare.zip ``  He
 
   
   ```
-  singularity exec  --bind  magicsquare/for_redistribution_files_only:/execute         octave-matlab.sif         /execute/magicsquare 5
+  singularity exec --no-home  --bind  magicsquare/for_redistribution_files_only:/execute         octave-matlab.sif         /execute/magicsquare 5
 
  ```
      
