@@ -31,6 +31,11 @@ RUN apt-get -qq update && apt-get -qq install -y \
 
 # Configure environment variables for MCR
 ENV LD_LIBRARY_PATH /opt/mcr/v95/runtime/glnxa64:/opt/mcr/v95/bin/glnxa64:/opt/mcr/v95/sys/os/glnxa64:/opt/mcr/v95/extern/bin/glnxa64
+ENV XAPPLRESDIR /opt/mcr/v95/X11/app-defaults
+
+
+ENV MCR_CACHE_ROOT /tmp
+
 
 
 
