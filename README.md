@@ -33,7 +33,7 @@ An example application called magicsquare provided via `` magifsquare.zip ``  He
      
  ##  With GNU Octave
     
-    It is also possible to run your code via GNU Octave. For this aim
+It is also possible to run your code via GNU Octave. For this aim
     
  1. Run the container in shell mode
     
