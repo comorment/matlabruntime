@@ -21,13 +21,21 @@ This can be done in two step:
 
 An example application called magicsquare provided via `` magifsquare.zip ``  Hence all you need to do is unzipping this file as stated above. If you do this, you can reach the corresponding application at /magicsquare/for_redistribution_files_only/magicsquare
 
+Alternatively, you can build your own application via terminal
 
-2. Run the standalone application via Matlab Runtime.  You can this application by mounting the path of the application to the container as;
+  ```
+ mcc -m magicsquare.m
+
+ ```
+
+
+
+2. Run the standalone application via Matlab Runtime.  You can this application by mounting the path of the application (in this example magicsqure application) to the container as;
  
 
   
   ```
-  singularity exec --no-home  --bind  magicsquare/for_redistribution_files_only:/execute         octave-matlab.sif         /execute/magicsquare 5
+  singularity exec --no-home  --bind  path/of/application:/execute         octave-matlab.sif         /execute/magicsquare 5
 
  ```
      
