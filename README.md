@@ -1,6 +1,6 @@
 # Running your matlab project via Singularity Containers
 
-It is possible to run your matlab code in a container which does not have MATLAB. To do this, we first need to  build the standalone application of corresponding Matlab Code via Matlab Compiler locally and then run with this application with the container  which has Matlab Runtime 
+It is possible to run your matlab code in a container which does not have MATLAB. To do this, we first need to  build the standalone application of corresponding Matlab Code via Matlab Compiler locally and then run this application with the container  which has Matlab Runtime (https://ch.mathworks.com/products/compiler/matlab-runtime.html).
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ It is possible to run your matlab code in a container which does not have MATLAB
 
 
 
-* The main aim is running magicsquare.m file within container. 
+* The main aim is running your Matlab code  (magicsquare.m in this example) file within container. 
 
 
 ##  Running Matlab Runtime in Local
@@ -22,7 +22,7 @@ This can be done in two step:
 An example application called magicsquare provided via `` magifsquare.zip ``  Hence you can unzip and use this previously compiled application. If you do this, you can reach the corresponding application at /magicsquare/for_redistribution_files_only/magicsquare
 
 
-Alternatively, you can build your own application via terminal as
+Alternatively, you can build your own application from the actual mfile via terminal as
 
   ```
  mcc -m magicsquare.m
@@ -31,7 +31,7 @@ Alternatively, you can build your own application via terminal as
 
 
 
-2. Run the standalone application via Matlab Runtime.  You can this application by mounting the path of the application (in this example magicsqure application) to the container as;
+2. Then we can run the standalone application via Matlab Runtime.  You can this application by mounting the path of the application (in this example magicsqure application) to the container as;
  
 
   
