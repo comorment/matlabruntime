@@ -83,7 +83,7 @@ mcc -m runme.m -a ./
 
 ```
 
-Here  ``-a ./ ``  adds all subdirectories of the current working directory.  You may want look [here] (https://ch.mathworks.com/help/compiler/mcc.html) if you want to know more options.
+Here  ``-a ./ ``  adds all subdirectories of the current working directory.  You may want  tolook here: (https://ch.mathworks.com/help/compiler/mcc.html) if you want to know more options.
 
  Once the Matlab compiler created packaged application of runtime.m, you may find it as ``runme``  in  ``/pleiofdr``
 
