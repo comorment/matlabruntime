@@ -4,6 +4,8 @@ It is possible to run your matlab code in a container which does not have MATLAB
 
 ## Getting Started
 
+* All examples presented here are done via Matlab Compiler 2018b and Matlab Runtime 2018b. Note that our container (matlabruntime.sif) presented here includes Matlab Runtime 2018b, and it may not support the applications created by  Matlab Compiler versions other than Matlab Compiler 2018b. Hence if you want to use this container without any issue, make sure that you have Matlab Compiler 2018b.
+
 * Download ``matlabruntime.sif``, `` magicsquare.m ``   and `` magicsquare.zip ``  files placed in matlabruntime folder from [here](https://drive.google.com/drive/folders/1mfxZJ-7A-4lDlCkarUCxEf2hBIxQGO69?usp=sharing)
 * Import these files  to your secure HPC environment (i.e. TSD, Bianca, Computerome, or similar).
 * Extract the application file via ``unzip magifsquare.zip `` 
