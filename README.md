@@ -40,6 +40,85 @@ Alternatively, you can build your own application from the actual mfile via term
 
  ```
      
+     
+ 
+ 
+ 
+ 
+##  A comprehensive Example: How to run pleioFDR via Singularity container
+
+Pleiotropy-informed conditional and conjunctional false discovery rate (pleioFDR) allows to boost loci discovery in low-powered GWAS by levereging pleiotropic enrichment with a larger GWAS on related phenotype, and to identify genetic loci joinly associated with two phenotypes.  The software is available here: https://github.com/precimed/pleiofdr
+
+If you use pleioFDR software for your research publication, please cite the following paper(s):
+
+-Andreassen, O.A. et al. Improved detection of common variants associated with schizophrenia and bipolar disorder using pleiotropy-informed conditional false discovery rate. PLoS Genet 9, e1003455 (2013).
+
+The pleioFDR software may not be used for commercial purpose or in medical applications. We encourage all users to familiarize themselves with US patent https://www.google.no/patents/US20150356243 "Systems and methods for identifying polymorphisms".
+
+
+In this part, we will show how to run pleioFDR via matlabruntime,sif singularity container. Here are the step by step roadmap.
+
+1- Download the required code and data
+
+ ```
+git clone https://github.com/precimed/pleiofdr && cd pleiofdr
+wget https://precimed.s3-eu-west-1.amazonaws.com/pleiofdr/pleioFDR_demo_data.tar.gz
+tar -xzvf pleioFDR_demo_data.tar.gz
+```
+
+2-  We would like to run ``runme.m`` file. In order to run it via MatlabRuntime, we need to do a slight modification. We need to change  ``addpath( mlibrary ) ``  in runme.m  with:
+
+ ```
+if(isdeployed==false)
+addpath( mlibrary );
+end 
+```
+
+or alternatively you may change the whole ``runme.m``  code with the one provided in this respiratory.
+
+3- We then need to compile and package  ``runme.m`` . Note that, we should also need other mfiles and data in the project to run this code. Hence we need to add them via  `` -a ``  option as
+
+ ```
+mcc -m runme.m -a ./
+
+```
+
+Here  ``-a ./ ``  adds all subdirectories of the current working directory.  You may want look [here] (https://ch.mathworks.com/help/compiler/mcc.html) if you want to know more options.
+
+ Once the Matlab compiler created packaged application of runtime.m, you may find it as ``runme``  in  ``/pleiofdr``
+
+4- Now we need to run this runme application via matlabruntime.sif container. All you need to do is, downloading this container as stated before and move it to the ``/pleiofdr`` 
+
+5- Then we are ready to run pleioFDR as. Make sure that you are at ``/pleiofdr``  and then run your container
+
+ ```
+singularity exec -B $PWD:/execute  matlabruntime.sif /execute/runme
+
+```
+
+6- If everyhing goes on well, you should observe the outputs (figures and data) in  ``/pleiofdr/results`` folder 
+
+
+ ```
+
+Saving .csv... Warning: Directory already exists.
+> In save_to_csv (line 9)
+  In pleiotropy_analysis (line 265)
+  In runme (line 176)
+Warning: Directory already exists.
+> In save_to_csv (line 9)
+  In pleiotropy_analysis (line 266)
+  In runme (line 176)
+done
+Creating Manhattan plots... writing results/COGchr21_EDUchr21_conjfdr_0.01_manhattan.fig
+writing results/COGchr21_EDUchr21_conjfdr_0.01_manhattan.svg
+done
+
+
+```
+ 
+ 
+
 
 
 
