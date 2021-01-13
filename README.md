@@ -91,7 +91,7 @@ Here  ``-a ./ ``  adds all subdirectories of the current working directory.  You
 
 4- Now we need to run this runme application via matlabruntime.sif container. All you need to do is, downloading this container as stated before and move it to the ``/pleiofdr`` 
 
-5- Then we are ready to run pleioFDR as. Make sure that you are at ``/pleiofdr``  and then run your container
+5- Then we are ready to run pleioFDR. Make sure that you are at ``/pleiofdr``  and then run your container
 
  ```
 singularity exec -B $PWD:/execute  matlabruntime.sif /execute/runme
