@@ -78,7 +78,7 @@ addpath( mlibrary );
 end 
 ```
 
-or alternatively you may change the whole ``runme.m``  code with the one provided in this respiratory.
+or alternatively you may change the whole ``runme.m``  code with the one provided in this repo.
 
 3- We then need to compile and package  ``runme.m`` . Note that, we should also need other mfiles and data in the project to run this code. Hence we need to add them via  `` -a ``  option as
 
