@@ -60,7 +60,7 @@ If you use pleioFDR software for your research publication, please cite the foll
 The pleioFDR software may not be used for commercial purpose or in medical applications. We encourage all users to familiarize themselves with US patent https://www.google.no/patents/US20150356243 "Systems and methods for identifying polymorphisms".
 
 
-In this part, we will show how to run pleioFDR via matlabruntime,sif singularity container. Here are the step by step roadmap.
+In this part, we will show how to run pleioFDR via matlabruntime,sif singularity container. Here are the step by step roadmap. If you do not have Matlab Compiler or If you do not want to spend time with compiling, you can go with already compiled application available in this repo (the folder called pleioFDR). In this case you can directly jump to Step 4. 
 
 1- Download the required code and data
 
