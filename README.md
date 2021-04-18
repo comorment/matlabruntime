@@ -62,7 +62,7 @@ The pleioFDR software may not be used for commercial purpose or in medical appli
 
 In this part, we will show how to run pleioFDR via matlabruntime,sif singularity container. Here are the step by step roadmap. 
 
-NOTE: If you do not have Matlab Compiler with correct version or if you do not want to spend time with compiling, you can go with already compiled application from [here](https://drive.google.com/file/d/1RjMNqstXtAfUq0LUKdIj4TApcaYC931r/view?usp=sharing) . In this case you can download and unzip the application and directly jump to Step 4. 
+NOTE: If you do not have Matlab Compiler with the correct version or if you do not want to spend time with compiling, you can also go with already compiled application from [here](https://drive.google.com/file/d/1RjMNqstXtAfUq0LUKdIj4TApcaYC931r/view?usp=sharing). In this case you can download and unzip the application and directly jump to Step 4. 
 
 1- Download the required code and data
 
