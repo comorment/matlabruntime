@@ -1,9 +1,7 @@
-
-
 FROM ubuntu:xenial
-#FROM 'ubuntu:18.04'
 
-# runtime
+
+
 RUN apt-get -qq update && apt-get -qq install -y \
     unzip \
     xorg \
@@ -12,34 +10,29 @@ RUN apt-get -qq update && apt-get -qq install -y \
     mkdir /mcr-install && \
     mkdir /opt/mcr && \
     cd /mcr-install && \
-    wget http://ssd.mathworks.com/supportfiles/downloads/R2018b/deployment_files/R2018b/installers/glnxa64/MCR_R2018b_glnxa64_installer.zip && \
-    cd /mcr-install && \
-    unzip -q MCR_R2018b_glnxa64_installer.zip && \
+    wget --no-check-certificate -q https://ssd.mathworks.com/supportfiles/downloads/R2021a/Release/5/deployment_files/installer/complete/glnxa64/MATLAB_Runtime_R2021a_Update_5_glnxa64.zip && \
+    unzip -q MATLAB_Runtime_R2021a_Update_5_glnxa64.zip && \
+    rm -f MATLAB_Runtime_R2021a_Update_5_glnxa64.zip && \
     ./install -destinationFolder /opt/mcr -agreeToLicense yes -mode silent && \
     cd / && \
     rm -rf mcr-install
 
     # octave
 
-    RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
     octave \
     octave-control octave-image octave-io octave-optim octave-signal octave-statistics
 
 
+# environment variables for MCR
+ENV LD_LIBRARY_PATH /opt/mcr/v910/runtime/glnxa64:/opt/mcr/v910/bin/glnxa64:/opt/mcr/v910/sys/os/glnxa64:/opt/mcr/v910/extern/bin/glnxa64
 
+ENV XAPPLRESDIR /opt/mcr/v910/X11/app-defaults
 
-
-# Configure environment variables for MCR
-ENV LD_LIBRARY_PATH /opt/mcr/v95/runtime/glnxa64:/opt/mcr/v95/bin/glnxa64:/opt/mcr/v95/sys/os/glnxa64:/opt/mcr/v95/extern/bin/glnxa64
-ENV XAPPLRESDIR /opt/mcr/v95/X11/app-defaults
-
+#ENV XAPPLRESDIR /etc/X11/app-defaults
 
 ENV MCR_CACHE_ROOT /tmp
 
-
-
-
-#required tools
 RUN apt-get update && apt-get install -y  --no-install-recommends apt-utils\
     python3 \
     tar \
@@ -54,7 +47,4 @@ RUN apt-get update && apt-get install -y  --no-install-recommends apt-utils\
     && \
     rm -rf /var/lib/apt/lists/*
 
-    RUN  apt-get install -y liboctave-dev
-
-
-ADD /magicsquare /magicsquare
+ RUN  apt-get install -y liboctave-dev
