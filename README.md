@@ -17,7 +17,7 @@ It is possible to run your matlab code in a container which does not have MATLAB
 * The main aim is running your Matlab code/project within container. 
 
 
-##  Running Matlab Runtime in Local
+##  Running Matlab Runtime on Local machine
 
 This can be done in two step:
 
