@@ -40,7 +40,7 @@ Alternatively, you can build your own application from the actual mfile via term
 
   
   ```
-  singularity exec --no-home  --bind  path/of/application:/execute         matlabruntime.sif         /execute/magicsquare 5
+  singularity exec --no-home  --bind  path/of/application:/execute         matlabruntime2021a.sif         /execute/magicsquare 5
 
  ```
      
