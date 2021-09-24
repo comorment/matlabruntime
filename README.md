@@ -1,6 +1,6 @@
 # Running your matlab project via Singularity Containers
 
-It is possible to run your matlab code in a container which does not have MATLAB. To do this, we first need to  build the standalone application of corresponding Matlab Code via Matlab Compiler locally and then run this application with the container  which has Matlab Runtime (https://ch.mathworks.com/products/compiler/matlab-runtime.html).
+It is possible to run your matlab code in a container with MATLAB Runtime. To do this, we first need to  build the standalone application of corresponding Matlab Code via Matlab Compiler locally and then run this application with the container  which has Matlab Runtime (https://ch.mathworks.com/products/compiler/matlab-runtime.html).
 
 ## Getting Started
 
