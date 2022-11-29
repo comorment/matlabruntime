@@ -1,0 +1,2 @@
+pleiofdr filter=lfs diff=lfs merge=lfs -text
+magicsquare filter=lfs diff=lfs merge=lfs -text
