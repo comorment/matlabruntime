@@ -1,0 +1,4 @@
+CTG_COG_2018_DEMO.mat filter=lfs diff=lfs merge=lfs -text
+SSGAC_EDU_2016_DEMO.mat filter=lfs diff=lfs merge=lfs -text
+config.txt filter=lfs diff=lfs merge=lfs -text
+ref_1kgPhase3eur_LDr2p1_DEMO.mat filter=lfs diff=lfs merge=lfs -text

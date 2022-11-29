@@ -1,0 +1,8 @@
+ref9545380_1kgPhase3eur_LDr2p1.mat.about.txt filter=lfs diff=lfs merge=lfs -text
+ref9545380_annomat.about.txt filter=lfs diff=lfs merge=lfs -text
+ref9545380_annomat.mat filter=lfs diff=lfs merge=lfs -text
+ref9545380_bfile.tar.gz filter=lfs diff=lfs merge=lfs -text
+template.1000genomes503eur9m.sorted.complete_annot_hg19.annomat.uniq.ld_informed.txt.gz filter=lfs diff=lfs merge=lfs -text
+template.1000genomes503eur9m.sorted.complete_annot_hg19.annomat.uniq.txt.gz filter=lfs diff=lfs merge=lfs -text
+9545380.ref filter=lfs diff=lfs merge=lfs -text
+ref9545380_1kgPhase3eur_LDr2p1.mat filter=lfs diff=lfs merge=lfs -text
